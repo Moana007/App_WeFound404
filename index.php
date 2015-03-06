@@ -1,5 +1,13 @@
 
-<h1>HELLO WORLD BY GUIGUI</h1>
+<h1>HELLO WORLD BY GUIGUI !! :)</h1>
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
 <script>
   window.fbAsyncInit = function() {
     FB.init({
