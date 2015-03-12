@@ -110,7 +110,7 @@
     <div class="clear"></div>
 
   </div>
-
+<?php } ?>
   
 </body>
 </html> 
