@@ -1,0 +1,132 @@
+/* --------------------------------------- */
+/* -------------- INITIALISATION --------- */
+/* --------------------------------------- */
+@charset "utf-8";
+body { 
+	font-family: "Arial", Helvetica, sans-serif;
+	color: #464646; font-size: 62.5%;
+	background-color: #e3e3e3;
+}
+* { margin: 0; padding: 0; }
+ul { list-style-type: none; }
+img, table, canvas { border: 0; max-width: 100%; width: auto; height: auto; }
+table { width: 100%; height: 100%; border-spacing: 0; }
+	/* liens */
+a, a:link, a:visited {color: #000; outline: 0; text-decoration: none; }
+a:focus { outline: thin dotted; }
+	/* html 5 */
+header, nav, footer, figure, section, article, figcaption, aside {display: block;}
+
+
+/* --------------------------------------- */
+/* ----------------- MAIN ---------------- */
+/* --------------------------------------- */
+#main {
+	width:760px;
+	height: auto;
+}
+#col_right {
+	float:right;
+	width: 340px; /*380*/
+	background-color: rgb(167,124,98);
+	padding: 20px 20px;
+	height: 500px
+}
+#col_left {
+	float:left;
+	width: 340px;
+	background-color: rgb(233,207,167);
+	padding: 20px 20px;
+	height: 500px
+}
+.clear {
+	clear: both;
+}
+
+/* --------------------------------------- */
+/* ------ COL_LEFT & COL_RIGHT ------ */
+/* --------------------------------------- */
+#col_right a, #col_left a{
+	color:white;
+}
+.subtitle{
+	font-size: 1.4em;
+	margin-bottom: 40px;
+
+}
+#col_left h1, #col_right h1{
+	text-align: center;
+	font-size: 2.2em;
+	margin-top: 20px;
+}
+.text_under_btn {
+	font-size: 1.3em;
+	margin-top:40px;
+}
+
+.btn {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0px;
+	color: #ffffff;
+	padding: 8px 33px 8px 33px;
+	text-decoration: none;
+	border:none;
+	font-family: "Arial";
+	font-size:1.4em;
+	cursor: pointer;
+}
+
+/* --------------------------------------- */
+/* ------ VOTE REDACTEUR (COL_LEFT) ------ */
+/* --------------------------------------- */
+.btn_green {
+	background: #a9c206;
+	background-color:#a9c206;
+	-webkit-box-shadow: 0px 4px 0px #61a200;
+	-moz-box-shadow: 0px 4px 0px #61a200;
+	box-shadow: 0px 4px 0px #61a200;
+	margin-left: 45px; 
+}
+
+/* --------------------------------------- */
+/* --------- NEWSLETTER (COL_RIGHT) ------ */
+/* --------------------------------------- */
+.btn_orange {
+	background: #ff9b43;
+	background-color: #ff9b43;
+	-webkit-box-shadow: 0px 4px 0px #d3655f;
+	-moz-box-shadow: 0px 4px 0px #d3655f;
+	box-shadow: 0px 4px 0px #d3655f;
+	margin-left: 65px; 
+}
+#col_right input {
+	margin-left: 111px;
+	margin-bottom: 20px;
+}
+
+.msg_error1 p {
+	font-size: 1.4em;
+	padding-bottom: 10px;
+	margin-left: 65px;
+	color:red;
+}
+.msg_succes p {
+	font-size: 1.5em;
+	padding-bottom: 10px;
+	margin-left: 65px;
+	color:green;
+}
+
+
+
+
+/* --------------------------------------- */
+/* --------------- BUTTON ---------------- */
+/* --------------------------------------- */
+
+/*.btn_orange:hover, #btn_pdf button:hover  {
+	box-shadow: none;
+	margin-top:4px;
+}*/
+
