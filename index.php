@@ -36,85 +36,80 @@
 </head>
 <body>
 
-<?php
-  
- 
-?>
-
-
 <?php if ($session) { ?>
 
-  <h2>Informations récupérés de l'utilisateur Facebook connecté:</h2>
-  <p>Name: <?= $name; ?></p>
-  <p>Mail: <?= $mail; ?></p>
-  <p>Genre: <?= $genre; ?></p>
-  <p>id_fb: <?= $id_fb; ?></p>
+<div id="main2">
+  <header>
+    <h1>Voter pour votre redacteur du mois !</h1>
+    <p>Et recevez une interview avec votre rédacteur favoris !</p>
+  </header>
+  <div class="content">
+    <h2>Selectionner votre rédacteur favoris :</h2>
+    <div class="bloc_redacteur">
+      <form name="#" action="#" method="POST">
+        <article>
+          <img src="" alt="">
+          <p>Julien DUPOND</p>
+          <input type="radio" name="redac1" value=".."><br>
+          <a href="http://www.wefound404.com">Plus de détails</a>
+        </article>
+        <article>
+          <img src="" alt="">
+          <p>Arthure LAMBERD</p>
+          <input type="radio" name="redac1" value=".."><br>
+          <a href="http://www.wefound404.com">Plus de détails</a>
+        </article>
+        <article>
+          <img src="" alt="">
+          <p>Maxime JDOZAJO</p>
+          <input type="radio" name="redac1" value=".."><br>
+          <a href="http://www.wefound404.com">Plus de détails</a>
+        </article>
+        <article>
+          <img src="" alt="">
+          <p>Valentine TRAOKFDZPCKIJ</p>
+          <input type="radio" name="redac1" value=".."><br>
+          <a href="http://www.wefound404.com">Plus de détails</a>
+        </article>
+      </form>
+    </div>
+  </div>
 
-<!-- LOGOUT   -->
-  <p><a href="<?= $logouturl ?>" >Quitter</a></p>
+</div>
 
-<!-- Div Facebook Buttons like & share -->
-<div class="fb-like" data-href="https://www.facebook.com/nike"
-  data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div><br>
-
-
-<!-- Event (Récupére les events à venir et passé !) -->
-  <h2>Evenements récupéré de la page Event de Facebook SensioLabs:</h2>
-	<?php
-		foreach ($events as $event) {
-	    if (isset($event->description))
-	      echo "Description de mon event :<br>".$event->description."<br><br>";
-  	}
-  ?>
-
-
-<!-- Commentaires -->
-  <h2>Commentaire récupéré de la page Facebook Nike:</h2>
-  <?php
-  	foreach ($graphObject['data'] as $key) {
-    	echo "Message de <strong>".$key->from->name."</strong> : ".$key->message."<br>";
-    	echo "Le ".$key->created_time."<br><br>";
-  	}
-	?>
-
+  <!-- LOGOUT   -->
+    <p><a href="<?= $logouturl ?>" >Quitter</a></p>
+  <!-- Div Facebook Buttons like & share -->
+  <div class="fb-like" data-href="https://www.facebook.com/nike"
+    data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div><br>
 
 <?php } else {
   $loginUrl = $helper->getLoginUrl($permissions);
 ?>
- <div id="main">
-  <!-- VOTE REDACTEUR -->
-	<section id="col_left">
-    <h1>Le meilleur rédacteur du mois !</h1><br>
-    <p class="subtitle">Votez pour le meilleur rédacteur du mois de WeFound404 et gagné une interview avec le gagnant !</p>
-    <a href="<?= $loginUrl ?>"><button type="button" class="btn btn_green">Connectez vous pour voter !</button></a>
-    <p class="text_under_btn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Laboris nisi ut aliquip ex ea commodo consequat.<br>Duis aute irure velit esse cillum dolore eu fugiat nulla pariatur. Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	</section>
+  <div id="main">
+    <!-- VOTE REDACTEUR -->
+  	<section id="col_left">
+      <h1>Le meilleur rédacteur du mois !</h1><br>
+      <p class="subtitle">Votez pour le meilleur rédacteur du mois de WeFound404 et gagné une interview avec le gagnant !</p>
+      <a href="<?= $loginUrl ?>"><button type="button" class="btn btn_green">Connectez vous pour voter !</button></a>
+      <p class="text_under_btn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Laboris nisi ut aliquip ex ea commodo consequat.<br>Duis aute irure velit esse cillum dolore eu fugiat nulla pariatur. Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  	</section>
 
- <!-- NEWSLETTER -->
-	<section id="col_right">
-    <h1>Souscrivez à la newsletter !</h1><br>
-    <p class="subtitle">Inscrivez vous à la newsletter et recevez chaque mois les meilleurs actualités postées sur WeFound404, ainsi que les événements à venir pour rester connecté à l'information.</p>
-    <div id="field_mail">
-    <span class="msg_succes"></span>
-    <form action="model.php" method="post" id="form_newsletter">
-        <input type="mail" id="newsl_mail" name="newsl_mail" onclick="Test_adresse_email();" placeholder="votreemail@mail.com" required></input>
-        <span class="msg_error1"></span>
-        <button class="btn btn_orange">S'inscire à la newsletter</button>
-    </form>
+   <!-- NEWSLETTER -->
+  	<section id="col_right">
+      <h1>Souscrivez à la newsletter !</h1><br>
+      <p class="subtitle">Inscrivez vous à la newsletter et recevez chaque mois les meilleurs actualités postées sur WeFound404, ainsi que les événements à venir pour rester connecté à l'information.</p>
+      <span class="msg_succes"></span>
+      <form action="model.php" method="POST" id="form_newsletter">
+          <input type="mail" id="newsl_mail" name="newsl_mail" onclick="Test_adresse_email();" placeholder="votreemail@mail.com" required></input>
+          <span class="msg_error1"></span>
+          <button class="btn btn_orange">S'inscire à la newsletter</button>
+      </form>
       <p class="text_under_btn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Laboris nisi ea commodo consequat.<br>Duis aute irure velit esse cillum dolore eu fugiat nulla pariatur. Sunt in culpa deserunt mollit anim id est laborum.</p>
-    </div>
-  </section>
-  <div class="clear"></div>
+    </section>
+    <div class="clear"></div>
 
- </div>
-
-
-
-<?php
- // $loginUrl = $helper->getLoginUrl($permissions);
- //  echo '<a href="'.$loginUrl.'">Connexion</a>';
-}
-?>
+  </div>
 
   
 </body>
