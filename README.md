@@ -1,5 +1,5 @@
 # App_WeFound404
-Application Facebook proposant un système de vote et d'inscription à une newsletter
+Application Facebook de la page WeFound404, proposant un système de vote et d'inscription à une newsletter
 
 
 ## Sommaire
@@ -28,7 +28,7 @@ WeFound404 est un site d'actualités qui traite de tout type de sujet tenu par d
 De là, nous avons crée App_WeFound404, qui est une **application Facebook** pour la page Facebook de WeFound404.
 Cette application est composé de 2 parties:
 * Une partie **Newsletter**
-* Une partie **Vote** du le rédacteur du mois
+* Une partie **Vote** du rédacteur du mois
 
 ### 1.1 Newsletter <a id="newsl"></a> 
 Soit en renseignant son email dans le formulaire, soit en se connectant avec son compte Facebook, l'utilisateur peut s'inscrire à la newsletter de WeFound404.
