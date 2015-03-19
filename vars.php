@@ -4,4 +4,10 @@
 	$redirectUrl = "http://localhost/App_WeFound404/index.php";
 	$next = "http://localhost/App_WeFound404/index.php";
 	$permissions = array('email');
+
+	try{
+		$bdd = new PDO('mysql:host=localhost;dbname=taches;charset=utf8', 'root', '');
+	} catch(Exception $e){
+			die('Erreur : '.$e->getMessage());
+	}
 ?>

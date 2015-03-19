@@ -6,19 +6,42 @@
   use Facebook\FacebookRedirectLoginHelper;
   use Facebook\FacebookRequest;
 
-  FacebookSession::setDefaultApplication($appId, $appSecret);
+  FacebookSession::setDefaultApplication($appId ,$appSecret);
   $helper = new FacebookRedirectLoginHelper($redirectUrl);
-
-  try {
-      $session = $helper->getSessionFromRedirect();
-  } catch(FacebookRequestException $ex) {
-      // When Facebook returns an error
-      echo "ERROR FB";
-  } catch(\Exception $ex) {
-      // When validation fails or other local issues
-    echo "ERROR OTHER";
+   
+  try{
+    $session = $helper->getSessionFromRedirect();
   }
+  catch( FacebookRequestException $ex ){
+    echo $ex;
+  }
+  catch( Exception $ex ){
+    echo $ex;
+  }
+
+  // session_unset ();
+  // session_destroy ();
+
+  // see if we have a session in $_Session[]
+  if(isset($_SESSION['token'])){
+      // We have a token, is it valid?
+      $session = new FacebookSession($_SESSION['token']);
+      try{
+          $session->Validate($appId ,$appSecret);
+      }
+      catch( FacebookAuthorizationException $ex){
+          // Session is not valid any more, get a new one.
+          $session ='';
+      }
+  }
+   
+  // see if we have a session
+  if ( isset( $session ) ){  
+      // set the PHP Session 'token' to the current session token
+      $_SESSION['token'] = $session->getToken();
+  } 
   require_once('model.php');
+
 ?>
 
 
@@ -36,68 +59,24 @@
 </head>
 <body>
 
-<?php if ($session) { ?>
+<?php
+  if (!isset($vote))
+    $vote = 0;
 
-<div id="main2">
-  <header>
-    <h1>Voter pour votre redacteur du mois !</h1>
-    <p>Et recevez une interview avec votre rédacteur favoris.</p>
-  </header>
-  <div class="content">
-    <h2>Selectionner votre rédacteur favoris :</h2>
-    <div class="bloc_redacteur">
-      <form name="#" action="#" method="POST">
-        <article>
-          <img src="" alt="">
-          <p>Julien DUPOND</p>
-          <input  type="radio" name="redac1" value=".."><br>
-          <a href="http://www.wefound404.com">Plus de détails</a>
-        </article>
-        <article>
-          <img src="" alt="">
-          <p>Arthure LAMBERD</p>
-          <input type="radio" name="redac1" value=".."><br>
-          <a href="http://www.wefound404.com">Plus de détails</a>
-        </article>
-        <article>
-          <img src="" alt="">
-          <p>Maxime JDOZAJO</p>
-          <input type="radio" name="redac1" value=".."><br>
-          <a href="http://www.wefound404.com">Plus de détails</a>
-        </article>
-        <article>
-          <img src="" alt="">
-          <p>Valentine TRAOKFDZPCKIJ</p>
-          <input type="radio" name="redac1" value=".."><br>
-          <a href="http://www.wefound404.com">Plus de détails</a>
-        </article>
-        <button style="float: right" type="button" class="btn btn_green">Voter !</button>
-      </form>
-    </div>
-  </div>
-
-</div>
-
-  <!-- LOGOUT   -->
-    <p><a href="<?= $logouturl ?>" >Quitter</a></p>
-  <!-- Div Facebook Buttons like & share -->
-  <div class="fb-like" data-href="https://www.facebook.com/nike"
-    data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div><br>
-
-<?php } else {
+  if(!isset($session)) {
   $loginUrl = $helper->getLoginUrl($permissions);
 ?>
   <div id="main">
     <!-- VOTE REDACTEUR -->
-  	<section id="col_left">
+    <section id="col_left">
       <h1>Le meilleur rédacteur du mois !</h1><br>
       <p class="subtitle">Votez pour le meilleur rédacteur du mois de WeFound404 et gagné une interview avec le gagnant !</p>
       <a href="<?= $loginUrl ?>"><button type="button" class="btn btn_green">Connectez vous pour voter !</button></a>
       <p class="text_under_btn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Laboris nisi ut aliquip ex ea commodo consequat.<br>Duis aute irure velit esse cillum dolore eu fugiat nulla pariatur. Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  	</section>
+    </section>
 
    <!-- NEWSLETTER -->
-  	<section id="col_right">
+    <section id="col_right">
       <h1>Souscrivez à la newsletter !</h1><br>
       <p class="subtitle">Inscrivez vous à la newsletter et recevez chaque mois les meilleurs actualités postées sur WeFound404, ainsi que les événements à venir pour rester connecté à l'information.</p>
       <span class="msg_succes"></span>
@@ -111,6 +90,45 @@
     <div class="clear"></div>
 
   </div>
+
+
+
+<?php } else if ($session && $vote == 1) { ?>
+  <!-- PAGE DE FIN - A VOTE -->
+  <h1> Voté !!</h1>
+
+<?php } else if ($session && $vote == 0) { ?>
+
+<div id="main2">
+  <header>
+    <h1><?= $name = $user_profile->getName(); ?>, voter pour votre redacteur du mois !</h1>
+    <p>Et recevez une interview avec votre rédacteur favoris.</p>
+  </header>
+  <div class="content">
+    <h2>Selectionner votre rédacteur favoris :</h2>
+    <div class="bloc_redacteur">
+      <form name="form_vote" action="index.php" method="POST">
+        <?php foreach($redactors as $redactor): ?>
+          <article>
+            <img src="" alt="">
+            <p><?= $redactor["nom"]." ".$redactor["prenom"]; ?></p>
+            <input  type="radio" name="name_redactor" value="<?= $redactor["id"]; ?>"><br>
+            <a href="<?= $redactor["url_profil"]; ?>">Plus de détails</a>
+          </article>
+        <?php endforeach ?>
+        <button style="float: right" type="submit" class="btn btn_green">Voter !</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+  <!-- LOGOUT   -->
+    <p><a href="<?= $logouturl ?>" >Quitter</a></p>
+  <!-- Div Facebook Buttons like & share -->
+  <div class="fb-like" data-href="https://www.facebook.com/nike"
+    data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div><br>
+
 <?php } ?>
   
 </body>

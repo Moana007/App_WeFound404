@@ -127,8 +127,9 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 }
 #main2 header {
 	width: 400px;
-	height: 50px;
+	height: auto;
 	margin: 0 auto;
+	padding-bottom: 20px;
 }
 #main2 header h1, #main2 header p {
 	text-align: center;
