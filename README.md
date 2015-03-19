@@ -1,5 +1,5 @@
 # App_WeFound404
-Application Facebook de la page WeFound404, proposant un système de vote et d'inscription à une newsletter
+Application Facebook de la [page WeFound404](https://www.facebook.com/wefound404), proposant un système de vote et d'inscription à une newsletter
 
 
 ## Sommaire
@@ -25,7 +25,7 @@ Application Facebook de la page WeFound404, proposant un système de vote et d'i
 WeFound404 est un site d'actualités qui traite de tout type de sujet tenu par des étudiants de l'ECITV,
 à destination des étudiants comme des professionnels. Plus d'info sur le [site de WeFound404](http://wefound404.fr/)
 
-De là, nous avons crée App_WeFound404, qui est une **application Facebook** pour la page Facebook de WeFound404.
+De là, nous avons créé App_WeFound404, qui est une **application Facebook** pour la page Facebook de WeFound404.
 Cette application est composé de 2 parties:
 * Une partie **Newsletter**
 * Une partie **Vote** du rédacteur du mois
