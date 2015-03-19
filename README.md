@@ -43,7 +43,9 @@ Lors de la connexion, on récupére quelques infos nécessaires (email, nom, pre
 A partir de là, il lui serra proposé sous forme de blocs, les différents rédacteurs pour lesquelles ont peut voter.
 Ensuite il ne restera à l'utilisateur qu'à selectionner son choix, et a cliquer sur le bouton "voter".
 
-Au moment du vote, il se passe 2 choses en BDD:
+![Alt text](/img/field_vote.png "Formulaire de vote")
+
+Au moment du vote, il se passe 2 choses en BDD
 * Le vote est comptabilisé, donc la table "VOTE" se met a jour
 * Une valeur TRUE/FALSE se rajouter à la table "USER" afin d'empecher un utilisateur de pouvoir voter plusieurs foi. 
 
