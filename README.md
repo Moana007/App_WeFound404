@@ -17,7 +17,6 @@ Application Facebook proposant un systéme de vote et d'inscription à une newsl
     * [Facebook SDK pour PHP](#FbSDK)
     * [Les plugins sociaux](#plugSoc)
     * [Les autres languages](#autrLang)
-    * [Les outils utilisés](#outils)
 
 
 
@@ -107,9 +106,6 @@ Nous les utilisons donc pour faire les boutons de partage du vote, et de l'appli
 ### 4.3 Les autres languages (HTML/CSS/JavaScript/PHP) <a id="autrLang"></a> 
 La base de l'application est en HTML5 pour la structure, avec du CSS3 pour le design.
 PHP est utilisé pour la gestion des données et l'accés au serveur avec une connexion en PDO. Et JavaScript pour augmenter la rapidité d'execution de l'application et rendre l'experience utilisateur plus agréable.
-
-### 4.4 Les outils utilisés <a id="outils"></a>
-
 
 
 
