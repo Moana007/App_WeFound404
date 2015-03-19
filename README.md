@@ -43,7 +43,8 @@ Concernant la newsletter, il sagit simplement d'un formulaire à renseigner avec
 ### 2.2 Le Systéme de vote <a id="systVote"></a> 
 L'utilisateur doit auparavent se connecté et autoriser l'application à se lier a son compte Facebook.<br/>
 Lors de la connexion, on récupére quelques infos nécessaires (email, nom, prenom, age) et on verifie en BDD si l'utilisateur n'a pas déja voté.
-A partir de là, il lui serra proposé sous forme de blocs, les différents rédacteurs pour lesquelles ont peut voter.
+A partir de là, il lui serra proposé sous forme de blocs, les différents rédacteurs pour lesquelles ont peu voter.
+Si l'utilisateur veut avoir plus d'information sur le rédacteur, il peut cliqué dessus pour etre redirigé vers la page du profil du rédacteur situé le site internet de WeFound404.
 Ensuite il ne restera à l'utilisateur qu'à selectionner son choix, et a cliquer sur le bouton "voter".
 
 ![Alt text](/img/field_vote.png "Formulaire de vote")
@@ -52,7 +53,7 @@ Au moment du vote, il se passe 2 choses en BDD:
 * Le vote est comptabilisé, donc la table "VOTE" se met a jour
 * Une valeur TRUE/FALSE se rajouter à la table "USER" afin d'empecher un utilisateur de pouvoir voter plusieurs foi. 
 
-Aprés le vote, il est redirigé sur une nouvelle page, qui propose à l'utilisateur plusieurs actions possible:
+Aprés le vote, il est redirigé sur une nouvelle page, qui propose à l'utilisateur plusieurs actions sociales possibles:
 * **Un bouton de partage de l'application**, afin de partager l'application et insiter son entourage à venir voter.
 * **Un bouton de partage de son vote**, afin de partager son vote et insiter son entourage a voté pour la même personne.
 * **Un bouton like**, afin d'indiquer à tout le monde que vous avez apprecié l'application / le vote.
@@ -62,17 +63,23 @@ Aprés le vote, il est redirigé sur une nouvelle page, qui propose à l'utilisa
 
 
 ## 3. Les étapes utilisateurs <a id="etapUtil"></a> 
-L'application Facebook, se déroule en 3 étapes.
+L'application Facebook, se déroule sur les 3 etapes suivantes.
 
 ### 3.1 Page de présentation <a id="Ppres"></a> 
+La 1ére page sur laquelle arrive l'utilisateur. Cette page est séparé en 2 parties:
+* La partie newsletter avec un texte explicatif, un champ pour renseigner son mail et le boutton pour valider.
+* La partie vote, avec un texte explicatif et un bouton de connexion pour accéder à la page des votes.
 
+*Pour les 2 cas, si l'utilisateur est déja renseigné ou à déja voté, un message lui indiquera qu'il ne peut pas recommencer*
 
-### 3.2 Page du vote <a id="Pvote"></a> 
-
+### 3.2 Page du vote <a id="Pvote"></a>
+On accéde à cette page aprés s'etre connecté via la page de présentation.<br>
+Elle présente les differents rédacteurs pour lesquels ont peu voter. Une foi que l'utilisateur à voté en appuyant sur le bouton il serra redirigé vers la page des réseaux sociaux.
 
 ### 3.3 Page de réseaux sociaux <a id="Prs"></a> 
-
-
+Cette page est la derniére de l'application. On y est redirigé seulement aprés avoir effectué un vote.
+Elle présente different moyen de communiquer autour de l'application et du vote: **partage, like, commentaire**.
+C'est maintenant à l'utilisateur d'essayer de faire parler de l'application avec les outils qui lui sont mis à disposition.
 
 
 
