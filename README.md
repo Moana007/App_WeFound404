@@ -3,12 +3,15 @@ Application Facebook proposant un systéme de vote et l'inscription à une newsl
 
 ## Sommaire
 1. [Sujet](#sujet)
-  * [Newsletter](#newsl)
-  * [Vote du rédacteur du mois](#vote)
+* [Newsletter](#newsl)
+* [Vote du rédacteur du mois](#vote)
 2. [Descriptif des fonctionnalités](#descFonc)
-  * [Un simple formulaire](#simForm)
-  * [Le Systéme de vote](#systVote)
+* [Un simple formulaire](#simForm)
+* [Le Systéme de vote](#systVote)
 3. [Les étapes utilisateurs](#etapUtil)
+*[Page de présentation](#Ppres)
+*[Page du vote](#Pvote)
+*[Page de réseaux sociaux](#Prs)
 4. [Solution technique](#solTech)
 
 
@@ -45,11 +48,37 @@ Ensuite il ne restera à l'utilisateur qu'à selectionner son choix, et a clique
 
 ![Alt text](/img/field_vote.png "Formulaire de vote")
 
-Au moment du vote, il se passe 2 choses en BDD
+Au moment du vote, il se passe 2 choses en BDD:
 * Le vote est comptabilisé, donc la table "VOTE" se met a jour
 * Une valeur TRUE/FALSE se rajouter à la table "USER" afin d'empecher un utilisateur de pouvoir voter plusieurs foi. 
 
+Aprés le vote, il est redirigé sur une nouvelle page, qui propose à l'utilisateur plusieurs actions possible:
+* **Un bouton de partage de l'application**, afin de partager l'application et insiter son entourage à venir voter.
+* **Un bouton de partage de son vote**, afin de partager son vote et insiter son entourage a voté pour la même personne.
+* **Un bouton like**, afin d'indiquer à tout le monde que vous avez apprecié l'application / le vote.
+* **Une zone de discussion**, afin de pouvoir laisser un commentaire, une remarque, etc.. en rapport avec le vote.
+
+*Image à venir*
+
 
 ## 3. Les étapes utilisateurs <a id="etapUtil"></a> 
+L'application Facebook, se déroule en 3 étapes.
+
+### 3.1 Page de présentation <a id="Ppres"></a> 
+
+
+### 3.2 Page du vote <a id="Pvote"></a> 
+
+
+### 3.3 Page de réseaux sociaux <a id="Prs"></a> 
+
+
+
+
 
 ## 4. Solution technique <a id="solTech"></a> 
+
+
+
+
+
