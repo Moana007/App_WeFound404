@@ -3,15 +3,15 @@ Application Facebook proposant un systéme de vote et l'inscription à une newsl
 
 ## Sommaire
 1. [Sujet](#sujet)
-* [Newsletter](#newsl)
-* [Vote du rédacteur du mois](#vote)
+    * [Newsletter](#newsl)
+    * [Vote du rédacteur du mois](#vote)
 2. [Descriptif des fonctionnalités](#descFonc)
-* [Un simple formulaire](#simForm)
-* [Le Systéme de vote](#systVote)
+    * [Un simple formulaire](#simForm)
+    * [Le Systéme de vote](#systVote)
 3. [Les étapes utilisateurs](#etapUtil)
-*[Page de présentation](#Ppres)
-*[Page du vote](#Pvote)
-*[Page de réseaux sociaux](#Prs)
+    *[Page de présentation](#Ppres)
+    *[Page du vote](#Pvote)
+    *[Page de réseaux sociaux](#Prs)
 4. [Solution technique](#solTech)
 
 
