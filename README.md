@@ -13,7 +13,7 @@ Application Facebook proposant un systéme de vote et d'inscription à une newsl
     * [Page de présentation](#Ppres)
     * [Page du vote](#Pvote)
     * [Page de réseaux sociaux](#Prs)
-4. [Solution technique](#solTech)
+4. [Solutions techniques](#solTech)
     * [Facebook SDK pour PHP](#FbSDK)
     * [Les plugins sociaux](#plugSoc)
     * [Les autres languages](#autrLang)
@@ -90,7 +90,7 @@ C'est maintenant à l'utilisateur d'essayer de faire parler de l'application ave
 
 
 
-## 4. Solution technique <a id="solTech"></a> 
+## 4. Solutions techniques <a id="solTech"></a> 
 
 Pour réaliser cette application Web, nous avons dû avoir recours a plusieurs technologies différentes.
 Facebook proposant des d'outils pour le développement, nous en avons utilisé certains. Plus d'info sur [Facebook Developper](https://developers.facebook.com/).
