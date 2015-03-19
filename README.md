@@ -33,11 +33,19 @@ Sur la 2eme partie de l'application, aprés s'etre connecté, l'utilisateur pour
 
 ## 2. Descriptif des fonctionnalités <a id="descFonc"></a> 
 ### 2.1 Un simple formulaire <a id="simForm"></a>
-Concernant la newsletter, il sagit simplement d'un formulaire à renseigner avec son email. L'email va etre récupéré, comparé avec la base de données pour en verifier l'existance ou pas, puis l'ajout. Les email serviront ensuite pour l'envoi des mails chaque semaine.
+Concernant la newsletter, il sagit simplement d'un formulaire à renseigner avec son email. L'email va etre récupéré, comparé avec la base de données pour en verifier l'existance ou pas, puis ajouté à la BDD. Les emails serviront ensuite pour l'envoi des mails chaque semaine.
 
-![Alt text](/img/field_newsletter.png)
+![Alt text](/img/field_newsletter.png "Formulaire d'inscription")
 
 ### 2.2 Le Systéme de vote <a id="systVote"></a> 
+L'utilisateur doit auparavent se connecté et autoriser l'application à se lier a son compte Facebook.<br/>
+Lors de la connexion, on récupére quelques infos nécessaires (email, nom, prenom, age) et on verifie en BDD si l'utilisateur n'a pas déja voté.
+A partir de là, il lui serra proposé sous forme de blocs, les différents rédacteurs pour lesquelles ont peut voter.
+Ensuite il ne restera à l'utilisateur qu'à selectionner son choix, et a cliquer sur le bouton "voter".
+
+Au moment du vote, il se passe 2 choses en BDD:
+* Le vote est comptabilisé, donc la table "VOTE" se met a jour
+* Une valeur TRUE/FALSE se rajouter à la table "USER" afin d'empecher un utilisateur de pouvoir voter plusieurs foi. 
 
 
 ## 3. Les étapes utilisateurs <a id="etapUtil"></a> 
