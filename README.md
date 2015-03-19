@@ -20,7 +20,7 @@ Cette application est composé de 2 parties:
 * Une partie **Newsletter**
 * Une partie **Vote** du le rédacteur du mois
 
-### 1.1 Newsletter <a id="news1"></a> 
+### 1.1 Newsletter <a id="newsl"></a> 
 En renseignant son email dans un formulaire, l'utilisateur peut s'inscire à la newsletter de WeFound404.
 Cela lui permettra de recevoir chaque semaine un mail avec les meilleurs actualités de la semaine, des résumés et bien d'autres choses...
 
