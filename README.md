@@ -1,6 +1,13 @@
 # App_WeFound404
 Application Facebook de votes du meilleur éditeur de l'année du site WeFound404
 
+## Sommaire
+1. Sujet
+  * Newsletter
+  * Vote du rédacteur du mois
+2. Descriptif des fonctionnalités
+3. Les étapes utilisateurs
+4. [Solution technique](#solTech)
 
 
 ## 1. Sujet
@@ -26,4 +33,4 @@ Cela lui permettra de recevoir chaque semaine un mail avec les meilleurs actuali
 
 ## 3. Les étapes utilisateurs
 
-## 4. Solution technique
+## 4. Solution technique <a id="solTech"></a> 
