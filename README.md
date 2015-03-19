@@ -1,5 +1,6 @@
 # App_WeFound404
-Application Facebook proposant un systéme de vote et l'inscription à une newsletter
+Application Facebook proposant un systéme de vote et d'inscription à une newsletter
+
 
 ## Sommaire
 1. [Sujet](#sujet)
@@ -13,6 +14,11 @@ Application Facebook proposant un systéme de vote et l'inscription à une newsl
     * [Page du vote](#Pvote)
     * [Page de réseaux sociaux](#Prs)
 4. [Solution technique](#solTech)
+    * [Facebook SDK pour PHP](#FbSDK)
+    * [Les plugins sociaux](#plugSoc)
+    * [Les autres languages](#autrLang)
+    * [Les outils utilisés](#outils)
+
 
 
 ## 1. Sujet <a id="sujet"></a> 
@@ -31,6 +37,7 @@ Cela lui permettra de recevoir chaque semaine un mail avec les meilleurs actuali
 
 ### 1.2 Vote du rédacteur du mois <a id="vote"></a> 
 Sur la 2eme partie de l'application, aprés s'etre connecté, l'utilisateur pourra effectuer un vote pour un rédacteur de chez WeFound404. Une foi voté, il pourra partager son vote et poster des commentaires concernant le vote.
+
 
 
 
@@ -62,6 +69,7 @@ Aprés le vote, il est redirigé sur une nouvelle page, qui propose à l'utilisa
 *Image à venir*
 
 
+
 ## 3. Les étapes utilisateurs <a id="etapUtil"></a> 
 L'application Facebook, se déroule sur les 3 etapes suivantes.
 
@@ -84,6 +92,23 @@ C'est maintenant à l'utilisateur d'essayer de faire parler de l'application ave
 
 
 ## 4. Solution technique <a id="solTech"></a> 
+
+Pour réaliser cette application Web, nous avons dû avoir recours a plusieurs technologies différentes.
+Facebook proposant des d'outils pour le développement, nous en avons utilisé certains. Plus d'info sur [Facebook Developper](https://developers.facebook.com/).
+
+### 4.1 Facebook SDK pour PHP <a id="FbSDK"></a> 
+Le SDK Facebook pour PHP nous fournit une bibliothèque moderne, native pour accéder aux Graph API  et en profitant de Facebook Connexion. Plus d'info sur [Facebook Developper PHP SDK](https://developers.facebook.com/docs/reference/php/4.0.0).<br>
+Il nous est  trés utile ici pour récupéer les informations de l'utilisateur quand il se connecte, mais aussi pour la gestion du systéme des commentaires, des likes, etc...
+
+### 4.2 Les plugins sociaux <a id="plugSoc"></a> 
+Ce sont des éléments a récupérer directement sur le site de [Facebook Developper Plugins](https://developers.facebook.com/docs/plugins) principalement en JavaScript et Html. Ils nous permettent de générer des bouttons likes, partages, ou toute autres éléments de Facebook.<br>
+Nous les utilisons donc pour faire les boutons de partage du vote, et de l'application ainsi que pour le bouton like.  
+
+### 4.3 Les autres languages (HTML/CSS/JavaScript/PHP) <a id="autrLang"></a> 
+La base de l'application est en HTML5 pour la structure, avec du CSS3 pour le design.
+PHP est utilisé pour la gestion des données et l'accés au serveur avec une connexion en PDO. Et JavaScript pour augmenter la rapidité d'execution de l'application et rendre l'experience utilisateur plus agréable.
+
+### 4.4 Les outils utilisés <a id="outils"></a>
 
 
 
