@@ -71,6 +71,7 @@
           <input type="radio" name="redac1" value=".."><br>
           <a href="http://www.wefound404.com">Plus de détails</a>
         </article>
+        <button style="float: right" type="button" class="btn btn_green">Voter !</button>
       </form>
     </div>
   </div>
