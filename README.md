@@ -47,7 +47,7 @@ Il existe une 2éme possibilité toute aussi simple pour s'inscrire à la newsle
 
 ![Alt text](/img/field_newsletter.png "Formulaire d'inscription")
 
-### 2.2 Le Systéme de vote <a id="systVote"></a> 
+### 2.2 Le Système de vote <a id="systVote"></a> 
 L'utilisateur doit auparavant se connecté et autoriser l'application à se lier a son compte Facebook.<br/>
 Lors de la connexion, on récupère quelques infos nécessaires (email, nom, prénom, âge) et on vérifie en BDD si l'utilisateur n'a pas déjà voté.
 A partir de là, il lui serra proposé sous forme de blocs, les différents rédacteurs pour lesquelles ont peu voter.
