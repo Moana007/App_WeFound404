@@ -42,7 +42,7 @@ Sur la 2eme partie de l'application, après s'être connecté, l'utilisateur pou
 
 ## 2. Descriptif des fonctionnalités <a id="descFonc"></a> 
 ### 2.1 Un simple formulaire <a id="simForm"></a>
-Concernant la newsletter, il s'agit simplement d'un formulaire à renseigner avec son email. L'email va être récupéré, comparé avec la base de données pour en vérifier l'existence ou pas, puis ajouté à la BDD. Les emails serviront ensuite pour l'envoi des mails chaque semaine.
+Concernant la newsletter, il s'agit simplement d'un formulaire à renseigner avec son email. L'email va être récupéré, comparé avec la base de données pour en vérifier l'existence ou pas, puis ajouté à la BDD. Les emails serviront ensuite pour l'envoi des mails chaque semaine.<br>
 Il existe une 2éme possibilité toute aussi simple pour s'inscrire à la newsletter, c'est de passer par le bouton de connexion Facebook. Lors de la connexion, on récupère l'email de l'utilisateur et on procède de la même manière que pour le formulaire.
 
 ![Alt text](/img/field_newsletter.png "Formulaire d'inscription")
