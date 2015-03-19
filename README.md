@@ -35,6 +35,8 @@ Sur la 2eme partie de l'application, aprés s'etre connecté, l'utilisateur pour
 ### 2.1 Un simple formulaire <a id="simForm"></a>
 Concernant la newsletter, il sagit simplement d'un formulaire à renseigner avec son email. L'email va etre récupéré, comparé avec la base de données pour en verifier l'existance ou pas, puis l'ajout. Les email serviront ensuite pour l'envoi des mails chaque semaine.
 
+![Alt text](/img/field_newsletter.png)
+
 ### 2.2 Le Systéme de vote <a id="systVote"></a> 
 
 
