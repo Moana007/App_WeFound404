@@ -41,7 +41,7 @@
 <div id="main2">
   <header>
     <h1>Voter pour votre redacteur du mois !</h1>
-    <p>Et recevez une interview avec votre rédacteur favoris !</p>
+    <p>Et recevez une interview avec votre rédacteur favoris.</p>
   </header>
   <div class="content">
     <h2>Selectionner votre rédacteur favoris :</h2>
@@ -50,7 +50,7 @@
         <article>
           <img src="" alt="">
           <p>Julien DUPOND</p>
-          <input type="radio" name="redac1" value=".."><br>
+          <input  type="radio" name="redac1" value=".."><br>
           <a href="http://www.wefound404.com">Plus de détails</a>
         </article>
         <article>

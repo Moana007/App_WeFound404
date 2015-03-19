@@ -133,6 +133,12 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 #main2 header h1, #main2 header p {
 	text-align: center;
 }
+#main2 header h1{
+	font-size: 2em;
+}
+#main2 header p {
+	font-size: 1.4em;
+}
 #main2 .content {
 	margin:0 auto;
 	width: 670px;
@@ -141,9 +147,16 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 }
 #main2 .bloc_redacteur {
 	margin:0 auto;
-	width: 100%;
 	height: auto;
 	background-color: green;
+	padding:10px 20px 10px 11px;
+
+}
+#main2 article{
+	width: 190px;
+	display: inline-block;
+	border:2px solid black;
+	margin-left: 15px
 
 }
 
