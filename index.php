@@ -1,4 +1,5 @@
 ﻿<?php session_start();
+error_reporting(E_ALL);
   require_once('vars.php');
   require_once('facebook-php-sdk-v4-4.0-dev/autoload.php');
 
