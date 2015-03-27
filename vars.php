@@ -26,7 +26,7 @@
 		// }
   
    try{
-      $bdd = new PDO ('mysql:host=ec2-54-228-195-52.eu-west-1.compute.amazonaws.com;
+      $bdd = new PDO ('pgsql:host=ec2-54-228-195-52.eu-west-1.compute.amazonaws.com;
 						dbname=d8rdvjqhdf1v8d;charset=utf8',
 						'mrzsdpvgwshhui',
 						'AFpCYYVZsC73FzHhvwfVcJwYBW'
@@ -38,5 +38,6 @@
    catch(Exeption $e){
       die("Erreur!".$e->getMessage());
    }
+
 //}
 ?>
