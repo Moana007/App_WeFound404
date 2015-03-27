@@ -13,16 +13,16 @@
 	// 	} catch(Exception $e){
 	// 			die('Erreur : '.$e->getMessage());
 	// 	}
-		
+
 	// } else {
 
-	// 	try{
-	// 		$bdd = new PDO('mysql:host=ec2-54-228-195-52.eu-west-1.compute.amazonaws.com;
-	// 						dbname=d8rdvjqhdf1v8d;charset=utf8',
-	// 						'mrzsdpvgwshhui',
-	// 						'AFpCYYVZsC73FzHhvwfVcJwYBW');
-	// 	} catch(Exception $e){
-	// 			die('Erreur : '.$e->getMessage());
-	// 	}
-	// }
+		try{
+			$bdd = new PDO('mysql:host=ec2-54-228-195-52.eu-west-1.compute.amazonaws.com;
+							dbname=d8rdvjqhdf1v8d;charset=utf8',
+							'mrzsdpvgwshhui',
+							'AFpCYYVZsC73FzHhvwfVcJwYBW');
+		} catch(Exception $e){
+				die('Erreur : '.$e->getMessage());
+		}
+	//}
 ?>
