@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Title of the document</title>
+  <title>Vote du meilleur redacteur WeFound404</title>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/script.js"></script>
