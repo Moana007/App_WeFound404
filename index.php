@@ -1,48 +1,5 @@
-﻿<?php session_start();
-//error_reporting(E_ALL);
-  require_once('vars.php');
-  require_once('facebook-php-sdk-v4-4.0-dev/autoload.php');
-
-  use Facebook\FacebookSession;
-  use Facebook\FacebookRedirectLoginHelper;
-  use Facebook\FacebookRequest;
-
-  FacebookSession::setDefaultApplication($appId ,$appSecret);
-  $helper = new FacebookRedirectLoginHelper($redirectUrl);
-   
-  try{
-    $session = $helper->getSessionFromRedirect();
-  }
-  catch( FacebookRequestException $ex ){
-    echo $ex;
-  }
-  catch( Exception $ex ){
-    echo $ex;
-  }
-
-  // session_unset ();
-  // session_destroy ();
-
-  // see if we have a session in $_Session[]
-  if(isset($_SESSION['token'])){
-      // We have a token, is it valid?
-      $session = new FacebookSession($_SESSION['token']);
-      try{
-          $session->Validate($appId ,$appSecret);
-      }
-      catch( FacebookAuthorizationException $ex){
-          // Session is not valid any more, get a new one.
-          $session ='';
-      }
-  }
-   
-  // see if we have a session
-  if ( isset( $session ) ){  
-      // set the PHP Session 'token' to the current session token
-      $_SESSION['token'] = $session->getToken();
-  } 
-  require_once('model.php');
-
+﻿<?php 
+  require_once('config.php');
 ?>
 
 
@@ -57,9 +14,14 @@
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/script.js"></script>
+  <meta property="og:title" content="Vote du meilleur redacteur WeFound404" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://appwefound404.herokuapp.com/" />
+  <meta property="og:image" content="img/logo_wefound404.png" />
+
 </head>
 <body>
-
+  <?php require_once('script_social.php'); ?>
 <?php
   if (!isset($vote))
     $vote = 0;
@@ -93,11 +55,6 @@
   </div>
 
 
-
-<?php } else if ($session && $vote == 1) { ?>
-  <!-- PAGE DE FIN - A VOTE -->
-  <h1> Voté !!</h1>
-
 <?php } else if ($session && $vote == 0) { ?>
 
 <div id="main2">
@@ -130,8 +87,38 @@
   <div class="fb-like" data-href="https://www.facebook.com/nike"
     data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div><br>
 
+
+
+<?php } else if ($session && $vote == 1) { ?>
+  <!-- PAGE DE FIN - A VOTE -->
+  <h1><?= $name = $user_profile->getName(); ?>, merci d'avoir voté !</h1>
+
+  <div class="bloc_social">
+    <!-- url application fb: http://appwefound404.herokuapp.com/ -->
+    <p>Vous avez aimez voter ! dite le à tous le monde --> <div class="fb-like" data-href="http://appwefound404.herokuapp.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></p>
+    
+    <br><br>
+    <p>Inviter a directement voter ! <button>partage l'application FB</button></p>
+    
+    <br><br>
+    <p>Partager votre vote <button>partage le résultat du vote</button></p>
+    
+    <br><br>
+    <p>Inviter vos amis a rejoindre notre page pour voter <button>recommande la page</button></p>
+  </div>
+
+
+<br><br><br><br><br>
+  <div>
+    <p>ZONE POUR LAISSER UN COMMENTAIRE SUR L'APPLICATION</p>
+  </div>
+
+
+
+
+
+
 <?php } ?>
-  
 </body>
 </html> 
 

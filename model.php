@@ -4,31 +4,30 @@
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
 
+
+if(isset($_POST['newsl_mail'])) {
+
+
+	$req = $bdd->prepare('SELECT mail FROM newsletter WHERE mail = :mail');
+	$req->execute(array('mail' => $_POST['newsl_mail']));
+	$result = $req->fetch();
+
+	if($result["mail"] != $_POST['newsl_mail']){
+		$req = $bdd->prepare('INSERT INTO newsletter(mail) VALUES(:mail)');
+		$req->execute(array('mail' => $_POST['newsl_mail']));
+		
+		sleep(3);
+		header('Location: index.php'); // FAIRE REQUETE ET REDIRECT EN AJAX
+	}
+	else { echo "vous etes deja inscrit";}
+}
+
 if (isset($session)) {
 
-	if(isset($_POST['newsl_mail'])) {
-
-		try{
-			$bdd = new PDO('mysql:host=localhost;dbname=taches;charset=utf8', 'root', '');
-		} catch(Exception $e){
-			die('Erreur : '.$e->getMessage());
-		}
-
-		$req = $bdd->prepare('SELECT mail FROM newsletter WHERE mail = :mail');
-		$req->execute(array('mail' => $_POST['newsl_mail']));
-		$result = $req->fetch();
-
-		if($result["mail"] != $_POST['newsl_mail']){
-			$req = $bdd->prepare('INSERT INTO newsletter(mail) VALUES(:mail)');
-			$req->execute(array('mail' => $_POST['newsl_mail']));
-			//header(location:"model.php")
-			sleep(3);
-			header('Location: index.php'); // FAIRE REQUETE ET REDIRECT EN AJAX
-		}
-		else { echo "vous etes deja inscrit";}
-
-	}
-	else if( isset($_POST['name_redactor']) ) {
+	// ---------------------------------------------------------
+	// ---------------------- VOTE USER ------------------------
+	// ---------------------------------------------------------
+	if( isset($_POST['name_redactor']) ) {
 
 		//Recupére le nb de vote et on ajoute +1
 		$id_redactor = $_POST['name_redactor'];
@@ -48,13 +47,16 @@ if (isset($session)) {
 
 		$req3 = $bdd->prepare('UPDATE users SET vote = :vote WHERE id_fb = :id_fb');
 		$req3->execute(array( 'vote' => $vote, 'id_fb' => $id_fb ));
+		
+		header('Location: index.php');
 
 	}
-	else {
+	
 	// ---------------------------------------------------------
 	// ---------------------- USER INFO ------------------------
 	// Récupération des infos user via SDK FB, et update en BDD
 	// ---------------------------------------------------------
+	else {
 		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());
 
 		$name = $user_profile->getName();
