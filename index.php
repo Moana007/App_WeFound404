@@ -15,6 +15,7 @@
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/script.js"></script>
   <meta property="og:title" content="Vote du meilleur redacteur WeFound404" />
+  <meta property="og:description" content="Venez voter pour le redacteur du mois de WeFound404 !" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://appwefound404.herokuapp.com/" />
   <meta property="og:image" content="img/logo_wefound404.png" />
@@ -91,26 +92,41 @@
 
 <?php } else if ($session && $vote == 1) { ?>
   <!-- PAGE DE FIN - A VOTE -->
-  <h1><?= $name = $user_profile->getName(); ?>, merci d'avoir voté !</h1>
+  <div id="main3">
 
-  <div class="bloc_social">
-    <!-- url application fb: http://appwefound404.herokuapp.com/ -->
-    <p>Vous avez aimez voter ! dite le à tous le monde --> <div class="fb-like" data-href="http://appwefound404.herokuapp.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></p>
-    
-    <br><br>
-    <p>Inviter a directement voter ! <button>partage l'application FB</button></p>
-    
-    <br><br>
-    <p>Partager votre vote <button>partage le résultat du vote</button></p>
-    
-    <br><br>
-    <p>Inviter vos amis a rejoindre notre page pour voter <button>recommande la page</button></p>
-  </div>
+    <header>
+      <h1><?= $name = $user_profile->getName(); ?>, merci d'avoir voté</h1>
+      <p>Et maintenant fait parler du vote à tes amis !</p>
+    </header>
+
+    <div class="bloc_social">
+      <!-- url application fb: http://appwefound404.herokuapp.com/ -->
+      <div class="btn_social">
+        <p>Vous avez aimez voter ! Alors LIKE ou PARTAGE l'application !</p>
+        <div class="fb-like" data-href="http://appwefound404.herokuapp.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+      </div>
+      
+      <div class="btn_social">
+        <p>Partager votre vote <button>partage le résultat du vote</button></p>
+      </div>
+
+      <div class="btn_social">
+        <p>RECOMMANDER la page WeFound404</p>
+        <div class="fb-like" data-href="https://www.facebook.com/wefound404" data-layout="button" data-action="recommend" data-show-faces="false" data-width="700" data-share="false"></div>
+      </div>
+
+      <div class="btn_social">
+        <p>Ou bien visiter notre</p>
+        <p><a href="https://www.wefound404.fr">site WeFound404</a></p>
+      </div>
+      <div class="clear"></div>
+    </div>
 
 
-<br><br><br><br><br>
-  <div>
-    <p>ZONE POUR LAISSER UN COMMENTAIRE SUR L'APPLICATION</p>
+    <br><br><br><br><br>
+    <div>
+      <p>ZONE POUR LAISSER UN COMMENTAIRE SUR L'APPLICATION</p>
+    </div>
   </div>
 
 
@@ -122,25 +138,8 @@
 </body>
 </html> 
 
-<?php
-//FB like & Share
-echo '<div id="fb-root"></div>';
-echo '<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1528275870769644&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, "script", "facebook-jssdk"));</script>';
-?>
-<!-- <div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
 
-<script>
+<!--<script>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '371666859671907',
