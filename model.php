@@ -24,6 +24,20 @@ if(isset($_POST['newsl_mail'])) {
 
 if (isset($session)) {
 
+		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());
+
+		$name = $user_profile->getName();
+		$mail = $user_profile->getProperty('email');
+		$genre = $user_profile->getProperty('gender');
+		$id_fb = $user_profile->getProperty('id');
+
+		  
+		$req2 = $bdd->prepare('SELECT id_fb,vote,id FROM users WHERE id_fb = :fb');
+		$req2->execute((array('fb' => $id_fb)));
+		$result = $req2->fetch();
+		$vote = $result["vote"];
+		$id_user = $result["id"];
+
 	// ---------------------------------------------------------
 	// ---------------------- VOTE USER ------------------------
 	// ---------------------------------------------------------
@@ -48,8 +62,24 @@ if (isset($session)) {
 		$req3 = $bdd->prepare('UPDATE users SET vote = :vote WHERE id_fb = :id_fb');
 		$req3->execute(array( 'vote' => $vote, 'id_fb' => $id_fb ));
 		
+		
+		// Enregistre dans la table votes pour savoir qui a voté pour qui
+		$req5 = $bdd->prepare('INSERT INTO votes(id_user, id_redactor)
+								VALUES (:id_user, :id_redactor)');
+		$req5->execute(array( 'id_user' => $id_user, 'id_redactor' => $id_redactor ));
+
+
 		header('Location: index.php');
 
+	}
+	else if ($vote == 1) {
+		// select le redacteur pour lequel a voté l'utilisateur
+		$req = $bdd->prepare('SELECT nom, prenom 
+								FROM votes, redactor 
+								WHERE votes.id_redactor = redactor.id');
+		$req->execute();
+		$result = $req->fetch();
+		$nom_redact_vote = $result["nom"]." ".$result["prenom"];
 	}
 	
 	// ---------------------------------------------------------
@@ -57,18 +87,6 @@ if (isset($session)) {
 	// Récupération des infos user via SDK FB, et update en BDD
 	// ---------------------------------------------------------
 	else {
-		$user_profile = (new \Facebook\FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(Facebook\GraphUser::className());
-
-		$name = $user_profile->getName();
-		$mail = $user_profile->getProperty('email');
-		$genre = $user_profile->getProperty('gender');
-		$id_fb = $user_profile->getProperty('id');
-
-		  
-		$req2 = $bdd->prepare('SELECT id_fb, vote FROM users WHERE id_fb = :fb');
-		$req2->execute((array('fb' => $id_fb)));
-		$result = $req2->fetch();
-		$vote = $result["vote"];
 
 		if($result["id_fb"] != $id_fb){
 			$req = $bdd->prepare('INSERT INTO users(Nom, mail, genre, id_fb) VALUES(:name, :mail, :genre, :id_fb)');

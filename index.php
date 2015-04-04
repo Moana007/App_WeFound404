@@ -95,7 +95,8 @@
   <div id="main3">
 
     <header>
-      <h1><?= $name = $user_profile->getName(); ?>, merci d'avoir voté</h1>
+      <h1><?= $name = $user_profile->getName(); ?>, merci d'avoir voté pour </h1>
+      <h2><?= $nom_redact_vote; ?></h2>
       <p>Et maintenant fait parler du vote à tes amis !</p>
     </header>
 
@@ -107,7 +108,8 @@
       </div>
       
       <div class="btn_social">
-        <p>Partager votre vote <button>partage le résultat du vote</button></p>
+        <p>Dites à tous le monde pour qui vous avez voté !<button type="button"
+         onclick="ShareVote('<?php echo $nom_redact_vote; ?>');">Partager votre vote</button></p>
       </div>
 
       <div class="btn_social">
@@ -117,7 +119,7 @@
 
       <div class="btn_social">
         <p>Ou bien visiter notre</p>
-        <p><a href="https://www.wefound404.fr">site WeFound404</a></p>
+        <p><a href="http://wefound404.fr">site WeFound404</a></p>
       </div>
       <div class="clear"></div>
     </div>

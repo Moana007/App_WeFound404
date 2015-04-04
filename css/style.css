@@ -177,11 +177,14 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 	margin: 0 auto;
 	padding-bottom: 20px;
 }
-#main3 header h1, #main3 header p {
+#main3 header h1, #main3 header p, #main3 header h2 {
 	text-align: center;
 }
 #main3 header h1{
 	font-size: 2em;
+}
+#main3 header h2{
+	font-size: 1.8em;
 }
 #main3 p {
 	font-size: 1.4em;
@@ -216,7 +219,20 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 #main3 .btn_social p a:hover {
 	text-decoration: underline;
 }
-
+#main3 .btn_social button {
+	background-image:-moz-linear-gradient(rgb(76,105,186), rgb(59,85,160));
+	background-image:-webkit-linear-gradient(rgb(76,105,186), rgb(59,85,160));
+	background-image:-o-linear-gradient(rgb(76,105,186), rgb(59,85,160));
+	background-image:linear-gradient(rgb(76,105,186), rgb(59,85,160));
+	color:white;
+	border: none;
+	border-radius: 3px;
+	font-weight: bold;
+	padding: 2px 5px;
+	margin-top: 60px;
+	text-align: center;
+	font-size: 0.75em;
+}
 
 
 /* --------------------------------------- */
