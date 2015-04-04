@@ -11,7 +11,7 @@ if(isset($_POST['newsl_mail'])) {
 	$req = $bdd->prepare('SELECT mail FROM newsletter WHERE mail = :mail');
 	$req->execute(array('mail' => $_POST['newsl_mail']));
 	$result = $req->fetch();
-
+exit('TOTO');
 	if($result["mail"] != $_POST['newsl_mail']){
 		$req = $bdd->prepare('INSERT INTO newsletter(mail) VALUES(:mail)');
 		$req->execute(array('mail' => $_POST['newsl_mail']));

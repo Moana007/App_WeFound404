@@ -24,6 +24,5 @@
 	   catch(Exeption $e){
 	      die("Erreur!".$e->getMessage());
 	   }
-
 	// }
 ?>
