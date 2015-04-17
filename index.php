@@ -86,7 +86,7 @@
 </div>
 
   <!-- LOGOUT   -->
-    <!-- <p><a href="<?= $logouturl ?>" >Quitter</a></p> -->
+    <p><a href="<?= $logouturl ?>" >Quitter</a></p>
   <!-- Div Facebook Buttons like & share -->
   <div class="fb-like" data-href="https://www.facebook.com/nike"
     data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div><br>
