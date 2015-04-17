@@ -111,6 +111,10 @@
          onclick="ShareVote('<?php echo $nom_redact_vote; ?>');">Partager votre vote</button></p>
       </div>
 
+       <div class="btn_social">
+        <p>Dites à tous le monde pour qui vous avez voté !<button type="button"
+         onclick="connectPage();">LIER LA PAGE</button></p>
+      </div>
       <div class="btn_social">
         <p>RECOMMANDER la page WeFound404</p>
         <div class="fb-like" data-href="https://www.facebook.com/wefound404" data-layout="button" data-action="recommend" data-show-faces="false" data-width="700" data-share="false"></div>

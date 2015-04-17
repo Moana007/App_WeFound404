@@ -8,10 +8,6 @@
       xfbml      : true,
       version    : 'v2.3'
     });
-      FB.ui({
-        method: 'pagetab',
-        redirect_uri: 'http://appwefound404.herokuapp.com/index.php'
-      }, function(response){});
   };
 
   (function(d, s, id) {
@@ -23,6 +19,15 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
+
+<script>
+  function connectPage() {
+      FB.ui({
+        method: 'pagetab',
+        redirect_uri: 'http://appwefound404.herokuapp.com/index.php'
+      }, function(response){});
+  }
+</script>
 
 <script>
   function ShareVote(nom_redacteur) {
