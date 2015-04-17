@@ -84,7 +84,7 @@
 </div>
 
   <!-- LOGOUT   -->
-    <p><a href="logout.php" >Quitter</a></p>
+    <p><a href="/logout.php" >Quitter</a></p>
 
 
 
