@@ -1,14 +1,14 @@
 ﻿<?php
 
-	// if($_SERVER['SERVER_NAME'] == "localhost") {
+	if($_SERVER['SERVER_NAME'] == "localhost") {
 
-		// try{
-		// 	$bdd = new PDO('mysql:host=localhost;dbname=taches;charset=utf8', 'root', '');
-		// } catch(Exception $e){
-		// 		die('Erreur : '.$e->getMessage());
-		// }
+		try{
+			$bdd = new PDO('mysql:host=localhost;dbname=taches;charset=utf8', 'root', '');
+		} catch(Exception $e){
+				die('Erreur : '.$e->getMessage());
+		}
 
-	// } else {
+	} else {
   
 	   $host_bdd='ec2-54-228-195-52.eu-west-1.compute.amazonaws.com';
 	   $name_bdd='d8rdvjqhdf1v8d';
@@ -24,5 +24,5 @@
 	   catch(Exeption $e){
 	      die("Erreur!".$e->getMessage());
 	   }
-	// }
+	}
 ?>

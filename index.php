@@ -16,6 +16,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/script.js"></script>
+  <link rel="icon" type="image/png" href="img/logo_wefound404.png" /> 
   <meta property="og:title" content="Vote du meilleur redacteur WeFound404" />
   <meta property="og:description" content="Venez voter pour le redacteur du mois de WeFound404 !" />
   <meta property="og:type" content="website" />
@@ -85,7 +86,7 @@
 </div>
 
   <!-- LOGOUT   -->
-    <p><a href="<?= $logouturl ?>" >Quitter</a></p>
+    <!-- <p><a href="<?= $logouturl ?>" >Quitter</a></p> -->
   <!-- Div Facebook Buttons like & share -->
   <div class="fb-like" data-href="https://www.facebook.com/nike"
     data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div><br>
@@ -128,8 +129,9 @@
 
 
     <br><br><br><br><br>
-    <div>
+    <div class="comments">
       <p>ZONE POUR LAISSER UN COMMENTAIRE SUR L'APPLICATION</p>
+      <div class="fb-comments" data-href="http://localhost/App_WeFound404/index.php" data-numposts="5" data-colorscheme="light"></div>
     </div>
   </div>
 

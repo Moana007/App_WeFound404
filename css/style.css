@@ -233,6 +233,12 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 	text-align: center;
 	font-size: 0.75em;
 }
+#main3 .comments {
+	height: auto;
+	width: auto;
+
+	background-color: rgb(200,200,200);
+}
 
 
 /* --------------------------------------- */
