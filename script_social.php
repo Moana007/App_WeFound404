@@ -21,12 +21,12 @@
 
 
 <script>
-  function connectPage() {
-      FB.ui({
-        method: 'pagetab',
-        redirect_uri: 'http://appwefound404.herokuapp.com/index.php'
-      }, function(response){});
-  }
+  // function connectPage() {
+  //     FB.ui({
+  //       method: 'pagetab',
+  //       redirect_uri: 'http://appwefound404.herokuapp.com/index.php'
+  //     }, function(response){});
+  // }
 </script>
 
 <script>
