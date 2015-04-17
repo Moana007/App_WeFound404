@@ -119,6 +119,11 @@
         <p>RECOMMANDER la page WeFound404</p>
         <div class="fb-like" data-href="https://www.facebook.com/wefound404" data-layout="button" data-action="recommend" data-show-faces="false" data-width="700" data-share="false"></div>
       </div>
+      
+      <div class="btn_social">
+        <p>Invité vos amis a voté</p>
+        <p>BTN PARTAGE A DES GENS</p>
+      </div>
 
       <div class="btn_social">
         <p>Ou bien visiter notre</p>
