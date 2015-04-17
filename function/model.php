@@ -4,7 +4,7 @@
 	use Facebook\FacebookRedirectLoginHelper;
 	use Facebook\FacebookRequest;
 
-exit('CC');
+
 if(isset($_POST['newsl_mail'])) {
 
 	$mail_news = $_POST['newsl_mail'];
