@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/script_social.js"></script>
   <link rel="icon" type="image/png" href="img/logo_wefound404.png" /> 
   <meta property="og:title" content="Vote du meilleur redacteur WeFound404" />
   <meta property="og:description" content="Venez voter pour le redacteur du mois de WeFound404 !" />
@@ -23,7 +24,7 @@
 
 </head>
 <body>
-  <?php require_once('script_social.php'); ?>
+  <div id="fb-root"></div>
 <?php
   if (!isset($vote))
     $vote = 0;
@@ -100,7 +101,7 @@
     </header>
 
     <div class="bloc_social">
-      <!-- url application fb: http://appwefound404.herokuapp.com/ -->
+      <!-- url application fb: https://appwefound404.herokuapp.com/ -->
       <div class="btn_social">
         <p>Vous avez aimez voter ! Alors LIKE ou PARTAGE l'application !</p>
         <div class="fb-like" data-href="https://appwefound404.herokuapp.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
