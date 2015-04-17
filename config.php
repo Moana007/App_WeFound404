@@ -7,8 +7,8 @@
     $redirectUrl = "http://localhost/App_WeFound404/index.php";
     $next = "http://localhost/App_WeFound404/index.php";
   } else {
-    $redirectUrl = "http://appwefound404.herokuapp.com/index.php";
-    $next = "http://appwefound404.herokuapp.com/index.php";
+    $redirectUrl = "https://appwefound404.herokuapp.com/index.php";
+    $next = "https://appwefound404.herokuapp.com/index.php";
   }
   $permissions = array('email');
   //Compte admin

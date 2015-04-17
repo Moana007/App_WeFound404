@@ -18,7 +18,7 @@
   <meta property="og:title" content="Vote du meilleur redacteur WeFound404" />
   <meta property="og:description" content="Venez voter pour le redacteur du mois de WeFound404 !" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://appwefound404.herokuapp.com/" />
+  <meta property="og:url" content="https://appwefound404.herokuapp.com/" />
   <meta property="og:image" content="img/logo_wefound404.png" />
 
 </head>
@@ -103,7 +103,7 @@
       <!-- url application fb: http://appwefound404.herokuapp.com/ -->
       <div class="btn_social">
         <p>Vous avez aimez voter ! Alors LIKE ou PARTAGE l'application !</p>
-        <div class="fb-like" data-href="http://appwefound404.herokuapp.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+        <div class="fb-like" data-href="https://appwefound404.herokuapp.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
       </div>
       
       <div class="btn_social">
@@ -132,7 +132,7 @@
     <br><br><br><br><br>
     <div class="comments">
       <p>ZONE POUR LAISSER UN COMMENTAIRE SUR L'APPLICATION</p>
-      <div class="fb-comments" data-href="http://localhost/App_WeFound404/index.php" data-numposts="5" data-colorscheme="light"></div>
+      <div class="fb-comments" data-href="https://appwefound404.herokuapp.com/" data-numposts="5" data-colorscheme="light"></div>
     </div>
   </div>
 
