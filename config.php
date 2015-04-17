@@ -59,6 +59,6 @@
   }
 // FIN SESSION
 
-  require_once('connect_bdd.php'); 
-  require_once('model.php');
+  require_once('function/connect_bdd.php'); 
+  require_once('function/model.php');
 ?>

@@ -22,9 +22,9 @@
 <html>
 <head>
   <title>Administration de l'application de vote WeFound404</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  <script src="js/jquery-1.11.2.min.js"></script>
-  <script src="js/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+  <script src="../js/jquery-1.11.2.min.js"></script>
+  <script src="../js/script.js"></script>
 </head>
 <body>
 
