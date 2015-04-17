@@ -1,6 +1,6 @@
 <?php
 
-require_once('../vars.php');
+require_once('../config.php');
 
 if(isset($_POST['name_admin'])) {
 

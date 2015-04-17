@@ -44,7 +44,7 @@
       <h1>Souscrivez à la newsletter !</h1><br>
       <p class="subtitle">Inscrivez vous à la newsletter et recevez chaque mois les meilleurs actualités postées sur WeFound404, ainsi que les événements à venir pour rester connecté à l'information.</p>
       <span class="msg_succes"></span>
-      <form action="model.php" method="POST" id="form_newsletter">
+      <form action="function/model.php" method="POST" id="form_newsletter">
           <input type="mail" id="newsl_mail" name="newsl_mail" onclick="Test_adresse_email();" placeholder="votreemail@mail.com" required></input>
           <span class="msg_error1"></span>
           <button class="btn btn_orange">S'inscire à la newsletter</button>
@@ -83,7 +83,7 @@
 </div>
 
   <!-- LOGOUT   -->
-    <p><a href="logout.php" >Quitter</a></p>
+    <p><a href="function/logout.php" >Quitter</a></p>
 
 
 
