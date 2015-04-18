@@ -5,11 +5,11 @@
   $appSecret = "baf4ee6ac06ec33678ee0ef130469d7e";
   if($_SERVER['SERVER_NAME'] == "localhost") {
     $redirectUrl = "http://localhost/App_WeFound404/index.php";
-    $redirectUrlNewsletter = "http://localhost/App_WeFound404/function/add_FB_newsletter.php";
+    $redirectUrlNewsletter = "http://localhost/App_WeFound404/add_FB_newsletter.php";
     $next = "http://localhost/App_WeFound404/index.php";
   } else {
     $redirectUrl = "https://appwefound404.herokuapp.com/index.php";
-    $redirectUrlNewsletter = "https://appwefound404.herokuapp.com/function/add_FB_newsletter.php";
+    $redirectUrlNewsletter = "https://appwefound404.herokuapp.com/add_FB_newsletter.php";
     $next = "https://appwefound404.herokuapp.com/index.php";
   }
   $permissions = array('email');
