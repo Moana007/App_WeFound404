@@ -65,6 +65,10 @@
 	$genre = $user_profile->getProperty('gender');
 	$id_fb = $user_profile->getProperty('id');
 
+	$req2 = $bdd->prepare('SELECT id_fb,vote,id FROM users WHERE id_fb = :fb');
+	$req2->execute((array('fb' => $id_fb)));
+	$result = $req2->fetch();
+
 	if($result["id_fb"] != $id_fb){
 		$req = $bdd->prepare('INSERT INTO users(Nom, mail, genre, id_fb) VALUES(:name, :mail, :genre, :id_fb)');
 		$req->execute(array(
@@ -74,12 +78,6 @@
 			'id_fb' => $id_fb
 		));
 	}
-
-	$req2 = $bdd->prepare('SELECT id_fb,vote,id FROM users WHERE id_fb = :fb');
-	$req2->execute((array('fb' => $id_fb)));
-	$result = $req2->fetch();
-
-
 
 	$req = $bdd->prepare('SELECT mail FROM newsletter WHERE mail = :mail');
 	$req->execute(array('mail' => $mail));
