@@ -1,10 +1,4 @@
 ﻿<?php require_once('config.php'); ?>
-
-
-
-<!-- -  - - - - - - - - - - - - - - - - -->
-<!-- - - - - - - DEBUT HTML - - - - - - -->
-<!-- - - - - - - - - - - - - - - - - -  -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,6 +34,7 @@
     </section>
 
    <!-- NEWSLETTER -->
+   <?php $loginUrl = $helperNewsletter->getLoginUrl($permissions); ?>
     <section id="col_right">
       <h1>Souscrivez à la newsletter !</h1><br>
       <p class="subtitle">Inscrivez vous à la newsletter et recevez chaque mois les meilleurs actualités postées sur WeFound404, ainsi que les événements à venir pour rester connecté à l'information.</p>
@@ -49,6 +44,10 @@
           <span class="msg_error1"></span>
           <button class="btn btn_orange">S'inscire à la newsletter</button>
       </form>
+      <div>
+        <p class="text_news">Ou en vous connectant avec votre compte Facebook<p>
+         <a href="<?= $loginUrl ?>"><button type="button" class="btn btn_orange2">S'inscrire via FB</button></a>  
+      </div>
       <p class="text_under_btn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Laboris nisi ea commodo consequat.<br>Duis aute irure velit esse cillum dolore eu fugiat nulla pariatur. Sunt in culpa deserunt mollit anim id est laborum.</p>
     </section>
     <div class="clear"></div>

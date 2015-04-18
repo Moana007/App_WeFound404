@@ -113,6 +113,14 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 	box-shadow: 0px 4px 0px #d3655f;
 	margin-left: 65px; 
 }
+.btn_orange2 {
+	background: #ff9b43;
+	background-color: #ff9b43;
+	-webkit-box-shadow: 0px 4px 0px #d3655f;
+	-moz-box-shadow: 0px 4px 0px #d3655f;
+	box-shadow: 0px 4px 0px #d3655f;
+	margin-left: 88px; 
+}
 #col_right input {
 	margin-left: 111px;
 	margin-bottom: 20px;
@@ -129,6 +137,12 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 	padding-bottom: 10px;
 	margin-left: 65px;
 	color:green;
+}
+.text_news {
+	font-size: 1.3em;
+	margin: 40px 0 10px 0;
+	font-weight: bold;
+	text-align: center;
 }
 
 /* --------------------------------------- */
