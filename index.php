@@ -134,7 +134,7 @@
       <div class="fb-comments" data-href="https://appwefound404.herokuapp.com/" data-numposts="5" data-colorscheme="light"></div>
     </div>
   
-    <p style="text-align: center; font-size: 1.5em; margin: 50px 0 20px 0 ;">By L.G. Moana - ESGI 2015</p>
+    <p style="text-align: center; font-size: 1.5em; margin: 130px 0 20px 0 ;">By L.G. Moana - ESGI 2015</p>
   
   </div>
   
