@@ -25,6 +25,7 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 	width:760px;
 	height: auto;
 	background-color: gray;
+	margin: 0 auto;
 }
 #col_right {
 	float:right;
@@ -216,7 +217,7 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 	text-align: center;
 }
 #main3 .fb-like {
-	margin-top: 20px;
+	margin-top: 25px;
 	width: 100%;
 	text-align: center;
 }
@@ -239,7 +240,7 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 	border-radius: 3px;
 	font-weight: bold;
 	padding: 2px 5px;
-	margin-top: 38px;
+	margin-top: 25px;
 	text-align: center;
 	font-size: 0.75em;
 }
@@ -281,6 +282,10 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 	font-size: 1.6em;
 	margin: 20px 0px;
 	text-align: center;
+}
+.bold_red {
+	color:rgb(236,71,65);
+	font-weight:bold;
 }
 
 /* --------------------------------------- */

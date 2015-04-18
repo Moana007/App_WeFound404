@@ -101,7 +101,7 @@
     <div class="bloc_social">
       <!-- url application fb: https://appwefound404.herokuapp.com/ -->
       <div class="btn_social">
-        <p>Vous avez aimez voter ? Alors LIKE ou PARTAGE l'application !</p>
+        <p><span class="bold_red">LIKE</span> ou <span class="bold_red">PARTAGE</span> l'application !</p>
         <div class="fb-like" data-href="https://appwefound404.herokuapp.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
       </div>
       
@@ -111,12 +111,12 @@
       </div>
 
       <div class="btn_social">
-        <p>RECOMMANDER la page WeFound404</p>
+        <p><span class="bold_red">RECOMMANDEZ</span> la page WeFound404.</p>
         <div class="fb-like" data-href="https://www.facebook.com/wefound404" data-layout="button" data-action="recommend" data-show-faces="false" data-width="700" data-share="false"></div>
       </div>
       
       <div class="btn_social">
-        <p>Invité vos amis a voté <button type="button" onclick="AppRequestVote();">Inviter des amis</button></p>
+        <p><span class="bold_red">INVITEZ</span> vos amis a voté.<br><button type="button" onclick="AppRequestVote();">Inviter des amis</button></p>
       </div>
 
       <div class="clear"></div>
@@ -131,9 +131,11 @@
       <h4>N'hésite pas à laisser un commentaires pour vous exprimer au sujet du vote</h4>
       <div class="fb-comments" data-href="https://appwefound404.herokuapp.com/" data-numposts="5" data-colorscheme="light"></div>
     </div>
+  
+    <p style="text-align: center; font-size: 1.5em; margin: 50px 0 20px 0 ;">By L.G. Moana - ESGI 2015</p>
+  
   </div>
-
-
+  
 
 
 <?php } ?>
