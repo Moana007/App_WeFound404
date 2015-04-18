@@ -75,8 +75,8 @@ if (isset($session)) {
 	else if ($vote == 1) {
 		// select le redacteur pour lequel a voté l'utilisateur
 		$req = $bdd->prepare('SELECT nom, prenom 
-								FROM votes, redactor 
-								WHERE votes.id_redactor = redactor.id');
+								FROM votes, users 
+								WHERE votes.id_user = users.id');
 		$req->execute();
 		$result = $req->fetch();
 		$nom_redact_vote = $result["nom"]." ".$result["prenom"];
