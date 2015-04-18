@@ -22,19 +22,18 @@
     $vote = 0;
 
   if(!isset($session)) {
-  $loginUrl = $helper->getLoginUrl($permissions);
 ?>
   <div id="main">
     <!-- VOTE REDACTEUR -->
     <section id="col_left">
       <h1>Le meilleur rédacteur du mois !</h1><br>
       <p class="subtitle">Votez pour le meilleur rédacteur du mois de WeFound404 et gagné une interview avec le gagnant !</p>
-      <a href="<?= $loginUrl ?>"><button type="button" class="btn btn_green">Connectez vous pour voter !</button></a>
+      <a href="<?= $helper->getLoginUrl($permissions); ?>"><button type="button" class="btn btn_green">Connectez vous pour voter !</button></a>
       <p class="text_under_btn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Laboris nisi ut aliquip ex ea commodo consequat.<br>Duis aute irure velit esse cillum dolore eu fugiat nulla pariatur. Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </section>
 
    <!-- NEWSLETTER -->
-   <?php $loginUrl = $helperNewsletter->getLoginUrl($permissions); ?>
+  
     <section id="col_right">
       <h1>Souscrivez à la newsletter !</h1><br>
       <p class="subtitle">Inscrivez vous à la newsletter et recevez chaque mois les meilleurs actualités postées sur WeFound404, ainsi que les événements à venir pour rester connecté à l'information.</p>
@@ -46,7 +45,10 @@
       </form>
       <div>
         <p class="text_news">Ou en vous connectant avec votre compte Facebook<p>
-         <a href="<?= $loginUrl ?>"><button type="button" class="btn btn_orange2">S'inscrire via FB</button></a>  
+        <form action="valid_newsletter.php" method="POST" id="form_newsletter">
+          <input type="hidden" name="newsletter_fb">
+          <button type="submit" class="btn btn_orange2">S'inscrire via FB</button></a> 
+        </form>
       </div>
       <p class="text_under_btn">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Laboris nisi ea commodo consequat.<br>Duis aute irure velit esse cillum dolore eu fugiat nulla pariatur. Sunt in culpa deserunt mollit anim id est laborum.</p>
     </section>

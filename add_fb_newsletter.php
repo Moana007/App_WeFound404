@@ -25,7 +25,6 @@
 	FacebookSession::setDefaultApplication($appId ,$appSecret);
 	$helperNewsletter = new FacebookRedirectLoginHelper($redirectUrlNewsletter);
 
-
 	  try{
 	    $session = $helperNewsletter->getSessionFromRedirect();
 	  }
