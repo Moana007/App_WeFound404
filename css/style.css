@@ -30,16 +30,27 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 #col_right {
 	float:right;
 	width: 340px; /*380*/
-	background-color: rgb(167,124,98);
+	/*background-color: rgb(167,124,98);*/
 	padding: 20px 20px;
-	height: 500px
+	height: 500px;
+
+	/*background-color: rgb(231,176,118);*/
+	background-image: url('../img/col_right.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
 }
 #col_left {
 	float:left;
-	width: 340px;
-	background-color: rgb(233,207,167);
+	width: 340px;/*
+	background-color: rgb(233,207,167);*/
 	padding: 20px 20px;
-	height: 500px
+	height: 500px;
+
+	background-image: url('../img/col_left.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
 }
 .clear {
 	clear: both;
@@ -83,11 +94,17 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 /* ------ VOTE REDACTEUR (COL_LEFT) ------ */
 /* --------------------------------------- */
 .btn_green {
-	background: #a9c206;
 	background-color:#a9c206;
 	-webkit-box-shadow: 0px 4px 0px #61a200;
 	-moz-box-shadow: 0px 4px 0px #61a200;
 	box-shadow: 0px 4px 0px #61a200;
+	margin-left: 45px; 
+}
+.btn_brown {
+	background-color:rgb(230,201,151);
+	-webkit-box-shadow: 0px 4px 0px rgb(155,114,84);
+	-moz-box-shadow: 0px 4px 0px rgb(155,114,84);
+	box-shadow: 0px 4px 0px rgb(155,114,84);
 	margin-left: 45px; 
 }
 
@@ -172,7 +189,7 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 	width:660px;
 	padding: 20px 50px;
 	background-color: rgb(231,176,118);
-	background-image: url('../img/bg_404-coupe-H2.png');
+	background-image: url('../img/bg_404-coupe.png');
 	background-position:center center;
 	background-repeat:no-repeat;
 	background-size: 100% 100%;
@@ -273,8 +290,7 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 }
 
 .comments {
-	margin
-	padding: 10px 20px;
+	text-align: center;
 	border-radius: 15px;
 	border: 7px solid rgb(155,114,84);
 }
@@ -286,6 +302,17 @@ header, nav, footer, figure, section, article, figcaption, aside {display: block
 .bold_red {
 	color:rgb(236,71,65);
 	font-weight:bold;
+}
+.retour {
+	display: block;
+	margin-top: 20px;
+	margin-bottom: -30px;
+	font-size: 1.5em;
+
+}
+.retour:hover {
+	text-decoration: underline;
+
 }
 
 /* --------------------------------------- */

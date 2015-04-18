@@ -125,6 +125,8 @@
     <div class="visit_site">
       <p>Ou bien visiter notre <a href="http://wefound404.fr">site WeFound404</a></p>
     </div>
+    
+    <a class="retour" href="function/logout.php"><< Revenir à l'accueil</a>
 
     <br><br><br><br><br>
     <div class="comments">
