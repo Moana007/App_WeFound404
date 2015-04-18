@@ -31,3 +31,14 @@
       description: 'Inscrivez vous à l\'application FB de WeFound404 pour voter pour le meilleur redacteur du mois ! Et gagner peut etre une interview avec le redacteur de votre choix !',
     }, function(response){});
   }
+
+
+
+  function AppRequestVote(){
+      FB.ui({
+         method: 'apprequests',
+         message: 'Je viens de voter pour le meilleur redacteur du mois de WeFound404 ! Viens voter toi aussi !'
+     });
+  }
+
+

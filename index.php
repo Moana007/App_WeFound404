@@ -44,7 +44,7 @@
       <h1>Souscrivez à la newsletter !</h1><br>
       <p class="subtitle">Inscrivez vous à la newsletter et recevez chaque mois les meilleurs actualités postées sur WeFound404, ainsi que les événements à venir pour rester connecté à l'information.</p>
       <span class="msg_succes"></span>
-      <form action="function/model.php" method="POST" id="form_newsletter">
+      <form action="index.php" method="POST" id="form_newsletter">
           <input type="mail" id="newsl_mail" name="newsl_mail" onclick="Test_adresse_email();" placeholder="votreemail@mail.com" required>
           <span class="msg_error1"></span>
           <button class="btn btn_orange">S'inscire à la newsletter</button>
@@ -101,13 +101,13 @@
     <div class="bloc_social">
       <!-- url application fb: https://appwefound404.herokuapp.com/ -->
       <div class="btn_social">
-        <p>Vous avez aimez voter ! Alors LIKE ou PARTAGE l'application !</p>
+        <p>Vous avez aimez voter ? Alors LIKE ou PARTAGE l'application !</p>
         <div class="fb-like" data-href="https://appwefound404.herokuapp.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
       </div>
       
       <div class="btn_social">
-        <p>Dites à tous le monde pour qui vous avez voté !<button type="button"
-         onclick="ShareVote('<?php echo $nom_redact_vote; ?>');">Partager votre vote</button></p>
+        <p>Dit à tous le monde pour qui tu as voté !<button type="button"
+         onclick="ShareVote('<?php echo $nom_redact_vote; ?>');">Partager mon vote</button></p>
       </div>
 
       <div class="btn_social">
@@ -116,21 +116,19 @@
       </div>
       
       <div class="btn_social">
-        <p>Invité vos amis a voté</p>
-        <p>BTN PARTAGE A DES GENS</p>
+        <p>Invité vos amis a voté <button type="button" onclick="AppRequestVote();">Inviter des amis</button></p>
       </div>
 
-      <div class="btn_social">
-        <p>Ou bien visiter notre</p>
-        <p><a href="http://wefound404.fr">site WeFound404</a></p>
-      </div>
       <div class="clear"></div>
     </div>
 
+    <div class="visit_site">
+      <p>Ou bien visiter notre <a href="http://wefound404.fr">site WeFound404</a></p>
+    </div>
 
     <br><br><br><br><br>
     <div class="comments">
-      <p>ZONE POUR LAISSER UN COMMENTAIRE SUR L'APPLICATION</p>
+      <h4>N'hésite pas à laisser un commentaires pour vous exprimer au sujet du vote</h4>
       <div class="fb-comments" data-href="https://appwefound404.herokuapp.com/" data-numposts="5" data-colorscheme="light"></div>
     </div>
   </div>

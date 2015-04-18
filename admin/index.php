@@ -43,12 +43,12 @@
 
     <h1>Partie Admin de l'application WeFound404</h1>
     <a href="logout.php">Déconnexion</a>
-    <br>
+    <br><br>
 
-    <h2>Resultat du vote le <?= $today ?></h2>
+    <h2>Resultat du vote le <?= $today ?></h2><br>
     <?php foreach($redactors as $redactor){ ?>
         <h3><?= $redactor['nom']." ".$redactor['prenom']; ?></h3>
-        <p style="margin-top:-10px;">Votes: <?= $redactor['nb_vote']; ?> </p>
+        <p>Votes: <?= $redactor['nb_vote']; ?> </p>
         <br>
     <?php } ?>
 

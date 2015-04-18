@@ -17,7 +17,7 @@ if(isset($_POST['newsl_mail'])) {
 		$req->execute(array('mail' => $_POST['newsl_mail']));
 		
 		sleep(3);
-		header('Location: ../index.php'); // FAIRE REQUETE ET REDIRECT EN AJAX
+		header('Location: index.php'); // FAIRE REQUETE ET REDIRECT EN AJAX
 	}
 	else { echo "vous etes deja inscrit";}
 }
@@ -69,7 +69,7 @@ if (isset($session)) {
 		$req5->execute(array( 'id_user' => $id_user, 'id_redactor' => $id_redactor ));
 
 
-		header('Location: ../index.php');
+		header('Location: index.php');
 
 	}
 	else if ($vote == 1) {
