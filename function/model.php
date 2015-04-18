@@ -77,7 +77,7 @@ if (isset($session)) {
 		$req = $bdd->prepare('SELECT nom, prenom 
 								FROM votes, redactor 
 								WHERE votes.id_user = :current_users');
-		$req->execute(array(':current_users' => $id_user));
+		$req->execute(array('current_users' => $id_user));
 		$result = $req->fetch();
 		$nom_redact_vote = $result["nom"]." ".$result["prenom"];
 	}
