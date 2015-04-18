@@ -37,7 +37,7 @@
   function AppRequestVote(){
       FB.ui({
          method: 'apprequests',
-         message: 'Je viens de voter pour le meilleur redacteur du mois de WeFound404 ! Viens voter toi aussi !'
+         message: 'Je viens de voter pour le meilleur redacteur du mois de WeFound404. Viens voter toi aussi !'
      });
   }
 

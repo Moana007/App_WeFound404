@@ -9,7 +9,7 @@ $(document).ready(function() {
             return false;
         }
             $("#form_newsletter").hide();
-            $(".msg_succes").append("<p>Vous etes bien inscrit a la newsletter</p>");
+            $(".msg_succes").append("<p style='font-weight:bold;'>Vous etes bien inscrit a la newsletter</p>");
 	});
 });
 

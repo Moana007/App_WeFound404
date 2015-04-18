@@ -65,8 +65,8 @@
   </header>
   <div class="content">
     <h2>Selectionner votre rédacteur favoris :</h2>
-    <div class="bloc_redacteur">
-      <form name="form_vote" action="index.php" method="POST">
+    <form name="form_vote" action="index.php" method="POST">
+      <div class="bloc_redacteur">
         <?php foreach($redactors as $redactor): ?>
           <article>
             <img src="" alt="">
@@ -75,15 +75,15 @@
             <a href="<?= $redactor["url_profil"]; ?>">Plus de détails</a>
           </article>
         <?php endforeach ?>
-        <button style="float: right" type="submit" class="btn btn_green">Voter !</button>
-      </form>
-    </div>
+      </div>
+      <button type="submit" class="btn btn_green">Voter !</button>
+      <div class="clear"></div>
+    </form>
   </div>
 
+  <a class="retour2" href="function/logout.php"><< Revenir à l'accueil</a>
 </div>
 
-  <!-- LOGOUT   -->
-    <p><a href="function/logout.php" >Quitter</a></p>
 
 
 
